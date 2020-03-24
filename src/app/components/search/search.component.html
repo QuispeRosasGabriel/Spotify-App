@@ -9,17 +9,10 @@
     />
   </div>
 </div>
-
-<div class="mt-5">
-  <app-tarjetas [items]="artistas"></app-tarjetas>
+<div *ngIf="loading">
+  <app-loading></app-loading>
 </div>
 
-<!-- <div class="card-columns m-5">
-  <div class="card" *ngFor="let artista of artistas">
-    <img [src]="artista.images | noimage" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">{{ artista.name }}</h5>
-      <p class="card-text"></p>
-    </div>
-  </div>
-</div> -->
+<div class="mt-5">
+  <app-tarjetas *ngIf="!loading" [items]="artistas"></app-tarjetas>
+</div>

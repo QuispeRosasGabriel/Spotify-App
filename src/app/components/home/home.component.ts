@@ -10,11 +10,14 @@ export class HomeComponent implements OnInit {
 
   paises: any = [];
   nuevasCanciones: any = []
+  loading: boolean
 
   constructor(private _countriesService: CountriesService,
     private _spotifyService: SpotifyService) {
+    this.loading = true;
     this._spotifyService.getNewReleases().subscribe((data: any) => {
       this.nuevasCanciones = data;
+      this.loading = false;
     })
   }
 
