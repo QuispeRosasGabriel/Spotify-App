@@ -9,13 +9,17 @@ import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { CountriesService } from './services/countries.service';
 import { SpotifyService } from './services/spotify.service';
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { TarjetasComponent } from './shared/tarjetas/tarjetas.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SearchComponent,
     ArtistComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoimagePipe,
+    TarjetasComponent
   ],
   imports: [
     BrowserModule,
