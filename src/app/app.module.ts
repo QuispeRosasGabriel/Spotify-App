@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
-import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { CountriesService } from './services/countries.service';
 import { SpotifyService } from './services/spotify.service';
@@ -18,7 +17,6 @@ import { ArtistaComponent } from './components/artista/artista.component';
     AppComponent,
     HomeComponent,
     SearchComponent,
-    ArtistComponent,
     NavbarComponent,
     NoimagePipe,
     TarjetasComponent,

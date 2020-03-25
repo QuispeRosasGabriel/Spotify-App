@@ -20,7 +20,7 @@ export class TarjetasComponent implements OnInit {
     } else {
       artistaId = item.artists[0].id
     }
-    this.router.navigate(['/artist', artistaId])
+    this.router.navigate(['/artista', artistaId])
   }
 
 }
