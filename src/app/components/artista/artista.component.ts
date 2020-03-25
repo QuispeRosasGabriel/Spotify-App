@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ArtistaComponent implements OnInit {
   cargando: boolean
   artista: any = {}
+  topTracks: any[] = []
 
   constructor(private _spotifyService: SpotifyService,
     private activatedRoute: ActivatedRoute) {
@@ -16,6 +17,7 @@ export class ArtistaComponent implements OnInit {
     //capturando parametros de la url
     this.activatedRoute.params.subscribe(params => {
       this.getArtista(params['id']);
+      this.getTopTracks(params['id']);
     })
   }
   ngOnInit() {
@@ -30,5 +32,14 @@ export class ArtistaComponent implements OnInit {
 
     })
   }
+
+  getTopTracks(id: string) {
+    this._spotifyService.getTopTracks(id).subscribe(data => {
+      this.topTracks = data
+      console.log(data);
+
+    })
+  }
+
 
 }
